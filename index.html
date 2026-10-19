@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Заявки — товарные заявки для магазинов</title>
+    <meta
+      name="description"
+      content="Мобильное приложение для сотрудников розничной сети: соберите товарную заявку по торговой точке и отправьте её в Telegram."
+    />
+    <meta name="theme-color" content="#0b1220" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Заявки" />
+
+    <link rel="manifest" href="/vape-zayavki102030/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/vape-zayavki102030/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/vape-zayavki102030/icons/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/vape-zayavki102030/icons/icon-512.png" />
+
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("zayavki-theme");
+          var dark = saved
+            ? saved === "dark"
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var root = document.documentElement;
+          root.classList.toggle("dark", dark);
+          root.style.colorScheme = dark ? "dark" : "light";
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", dark ? "#0b1220" : "#2563eb");
+        } catch (error) {
+          // тема применится после старта приложения
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/vape-zayavki102030/assets/index-DYZRvdlR.js"></script>
+    <link rel="stylesheet" crossorigin href="/vape-zayavki102030/assets/index-C-Eb-sef.css">
+  </head>
+  <body class="min-h-dvh bg-slate-100 antialiased dark:bg-slate-950">
+    <div id="root"></div>
+  </body>
+</html>
