@@ -109,6 +109,15 @@ VITE_BASE_PATH=./ npm run build
 
 ## Деплой на GitHub Pages
 
+> **Текущий статус этого репозитория:** приложение опубликовано из ветки `gh-pages`
+> (Settings → Pages → Source: **Deploy from a branch**, ветка `gh-pages`, папка `/`).
+> Это позволило получить рабочую ссылку без OAuth-разрешения `workflow`.
+>
+> Для автоматического деплоя через GitHub Actions добавьте в репозиторий файл
+> `.github/workflows/deploy.yml` (он уже есть в исходниках) и переключите
+> Settings → Pages → Source на **GitHub Actions**. Для пуша workflow-файла
+> GitHub CLI требуется дополнительный scope `workflow`.
+
 > Важно: репозиторий должен быть **публичным** — GitHub Pages бесплатен для публичных
 > репозиториев (с ограничениями, см. ниже).
 
